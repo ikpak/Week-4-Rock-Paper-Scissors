@@ -23,6 +23,8 @@ function App() {
   let [userC, setUserC] = useState({})
   let [computerC, setComputerC] = useState({})
   let [previousWinner, setPreviousWinner] = useState(null)
+  
+  const [gameHistory, setGameHistory] = useState([])
 
   let result = ""
 
@@ -59,16 +61,27 @@ function App() {
     judgement(choices[userChoice], choices[itemName])
     setComputerC(choices[itemName])
     setUserC(choices[userChoice])
+
+    gameHistory.push(result)
+    setGameHistory(gameHistory)
   }
 
   return (
     <div className="App">
       <Box name="You" choice={userC} previousWinner={previousWinner} />
-      <div class="buttons">
+      <div className="buttons">
         <h1>Choose your type:</h1>
-        <button onClick = {() => onplay("fire")}>Fire</button>
-        <button onClick = {() => onplay("grass")}>Grass</button>
-        <button onClick = {() => onplay("water")}>Water</button>
+        <button className="fire-btn" onClick = {() => onplay("fire")}>Fire</button>
+        <button className="grass-btn" onClick = {() => onplay("grass")}>Grass</button>
+        <button className="water-btn" onClick = {() => onplay("water")}>Water</button>
+        <div className="history">
+          <h3>History:</h3>
+          <ol>
+            {gameHistory.map(result => {
+              return <li>{result}</li>
+            })}
+          </ol>
+        </div>
       </div>
       <Box name="Computer" choice={computerC} previousWinner={previousWinner} />
     </div>

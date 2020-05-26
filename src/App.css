@@ -3,11 +3,13 @@
   justify-content: space-evenly;
   background-color: lightgray;
   font-family: 'Chelsea Market', cursive;
+  min-height: 600px;
+  padding-top: 50px;
 }
 
 .box {
   margin: 10px;
-  width: 500px;
+  width: 400px;
   height: 250px;
   border: 5px solid black;
   background-color: white;
@@ -37,4 +39,56 @@ img {
 
 .buttons {
   text-align: center;
+}
+
+.buttons > h1 {
+  font-size: 30px;
+}
+
+.buttons > button {
+  padding: 5px 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.buttons > button:hover {
+  cursor: pointer;
+}
+
+.fire-btn {
+  background-color: #F08030;
+  border-radius: 5px;
+  border-color: #F08030;
+  font-family: 'Chelsea Market', cursive;
+  color: white;
+}
+
+.grass-btn {
+  background-color: #78C850;
+  border-radius: 5px;
+  border-color: #78C850;
+  font-family: 'Chelsea Market', cursive;
+  color: white;
+}
+
+.water-btn {
+  background-color: #6890F0;
+  border-radius: 5px;
+  border-color: #6890F0;
+  font-family: 'Chelsea Market', cursive;
+  color: white;
+}
+
+.history > h3 {
+  margin-top: 40px;
+}
+
+ol {
+  margin-top: -5px;
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 5px;
 }
