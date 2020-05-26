@@ -2,27 +2,25 @@
   display: flex;
   justify-content: space-evenly;
   background-color: lightgray;
+  font-family: 'Chelsea Market', cursive;
 }
 
 .box {
   margin: 10px;
-  width: 400px;
-  height: 550px;
-  border: 1px solid black;
+  width: 500px;
+  height: 250px;
+  border: 5px solid black;
   background-color: white;
   border-radius: 30px;
   text-align: center;
-  font-family: 'Chelsea Market', cursive;
 }
 
 img {
-  height: 200px;
-  margin-top: 90px;
-  margin-bottom: 100px;
+  height: 100px;
 } 
 
 .winner {
-  border: 10px solid #15CC4E;
+  border: 5px solid #15CC4E;
 }
 
 .winner > h1 {
@@ -30,9 +28,13 @@ img {
 }
 
 .loser {
-  border: 10px solid #FF4218;
+  border: 5px solid #FF4218;
 }
 
 .loser > h1 {
   color: #FF4218;
+}
+
+.buttons {
+  text-align: center;
 }
