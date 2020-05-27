@@ -14,7 +14,7 @@ function App() {
 
   let result = ""
 
-  const judgement = (user,computer) => {
+  const judgement = (user, computer) => {
     if(user.name === "fire") {
       result = computer.name === "grass" ? "Won" : "Lost"  
     }
